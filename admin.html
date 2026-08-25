@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>RR Data Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <section class="login-screen" id="loginScreen">
+    <div class="login-art"></div>
+    <div class="localized-blur" id="localizedBlur" aria-hidden="true"></div>
+    <canvas class="luxury-canvas" id="luxuryCanvas" aria-hidden="true"></canvas>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="decor decor-right" aria-hidden="true">⌁</div>
+    <div class="login-panel">
+      <a class="back-to-website" href="https://rreventin-glitch.github.io/rrevent/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌂</span> Back to Website</a>
+      <div class="login-card" id="loginCard">
+        <div class="peek-character" aria-hidden="true"><span class="peek-head"><i class="peek-eye eye-left"></i><i class="peek-eye eye-right"></i><b class="peek-mouth"></b></span><span class="peek-body"></span></div>
+        <div class="brand-lockup"><span class="brand-mark">RR</span><span><b>RR EVENT</b><small>DATA MANAGEMENT SYSTEM</small></span></div>
+        <div class="login-copy"><span class="eyebrow">RR DATA MANAGEMENT SYSTEM</span><h1>ADMIN LOGIN</h1><p>Secure access to your event workspace</p></div>
+      <form id="loginForm">
+        <label><span>Username or email</span><input id="username" type="text" placeholder="Enter Username or email" required></label>
+        <label><span>Password</span><div class="password-field"><input id="password" type="password" placeholder="Enter your password" required><button type="button" class="icon-button" id="togglePassword" aria-label="Show password"><span class="eye-icon"><i></i></span></button></div></label>
+        <div class="login-options"><label class="check"><input type="checkbox" checked> <span>Remember me</span></label><button type="button" class="text-button" id="forgotPassword">Forgot password?</button></div>
+        <button class="primary-button" type="submit">Enter workspace <span>→</span></button>
+      </form>
+      </div>
+    </div>
+    <footer>© 2026 RR EVENT <span>•</span> Crafted for unforgettable work</footer>
+  </section>
+
+  <div class="modal-backdrop hidden" id="forgotPasswordModal"><div class="confirm-modal forgot-modal"><button class="modal-close" id="closeForgotPassword" aria-label="Close">×</button><div class="modal-symbol lock-symbol">⌑</div><span class="eyebrow">Security notice</span><h2>Password Reset Restricted</h2><p>Password reset is available only through authorized management.<br><br>Please contact your CEO or System Administrator for password assistance.</p><div class="ceo-contact"><span>Email <b>admin@rrevent.in</b></span><span>Phone <b>+91 62993 04593</b></span></div><div class="modal-actions"><button class="secondary-button" id="closeForgotPasswordAlt">Close</button><button class="primary-button" id="contactCeo">Contact CEO</button></div></div></div>
+
+  <div class="app-shell hidden" id="appShell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup sidebar-brand"><span class="brand-mark">RR</span><span><b>RR EVENT</b><small>DATA MANAGEMENT</small></span></div>
+      <div class="workspace-label">Workspace <span class="status-dot"></span></div>
+      <nav class="nav-list" id="navList">
+        <button class="nav-item active" data-view="Dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-view="Customers"><span>♙</span> Customers</button>
+        <button class="nav-item" data-view="Bookings"><span>▣</span> Bookings</button>
+        <button class="nav-item" data-view="Event Calendar"><span>▦</span> Event Calendar</button>
+        <button class="nav-item" data-view="Payments"><span>₹</span> Payments</button>
+        <button class="nav-item" data-view="Quotes"><span>▤</span> Quotes</button>
+        <button class="nav-item" data-view="Teams"><span>♧</span> Teams</button>
+        <div class="nav-divider"></div>
+        <button class="nav-item" data-view="Photography"><span>◉</span> Photography</button>
+        <button class="nav-item" data-view="Videography"><span>▷</span> Videography</button>
+        <button class="nav-item" data-view="Albums"><span>▧</span> Albums</button>
+        <button class="nav-item" data-view="Reports"><span>⌁</span> Reports</button>
+        <button class="nav-item" data-view="Settings"><span>⚙</span> Settings</button>
+      </nav>
+      <div class="sidebar-footer"><div class="support-icon">?</div><div><b>Need a hand?</b><small>Talk to support</small></div><span>→</span></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="menu-button" id="menuButton">☰</button><div class="search-box"><span>⌕</span><input placeholder="Search anything..." aria-label="Search"></div><div class="top-actions"><button class="notification" id="notificationButton" aria-label="Open notifications">♢<i>3</i></button><button class="theme-toggle" id="themeToggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode"><span class="theme-icon">🌙</span></button><div class="profile-wrap"><button class="profile" id="profileButton" aria-expanded="false" aria-haspopup="true"><div class="avatar">RK</div><div><b>Ritik Raj</b><small>Super Admin</small></div><span>⌄</span></button><div class="profile-menu" id="profileMenu" aria-hidden="true"><div class="profile-menu-head"><div class="avatar avatar-large">RK</div><div><b>Ritik Raj</b><small>Super Admin</small><em>● Active now</em></div></div><div class="profile-contact"><span>admin@rrevent.in</span><span>+91 98765 43210</span><span>Last login · Today, 09:42 AM</span></div><div class="profile-menu-list"><button data-profile-action="My Profile">♙ <span>My Profile</span></button><button data-profile-action="Security Settings">◈ <span>Security Settings</span></button><button data-profile-action="Notifications">♢ <span>Notifications <b class="menu-count">3</b></span></button><button data-profile-action="Activity Logs">⌁ <span>Activity Logs</span></button><button data-profile-action="Change Password">✦ <span>Change Password</span></button></div><button class="logout-link" data-profile-action="Logout">↪ <span>Logout</span></button></div></div></div></header>
+      <div class="page-content" id="pageContent">
+        <div class="page-heading"><div><span class="eyebrow">Friday, 21 August 2026</span><h1 id="pageTitle">Good morning, Ritik</h1><p id="pageSubtitle">Here is what is happening across your studio today.</p></div><div class="heading-actions"><div class="date-picker-wrap"><button class="secondary-button" id="dateButton" aria-expanded="false" aria-haspopup="dialog">01 Aug 2026 – 31 Aug 2026 <span>▣</span></button><div class="date-picker" id="datePicker" role="dialog" aria-label="Choose date range" hidden><div class="date-picker-heading"><b>Date range</b><button class="date-picker-close" id="closeDatePicker" aria-label="Close">×</button></div><div class="date-picker-fields"><label>From<input id="dateStart" type="date" value="2026-08-01"></label><label>To<input id="dateEnd" type="date" value="2026-08-31"></label></div><div class="date-picker-actions"><button class="secondary-button compact" id="cancelDateRange" type="button">Cancel</button><button class="primary-button compact" id="applyDateRange" type="button">Apply</button></div></div></div><button class="primary-button compact" id="quickAdd">+ <span>Add booking</span></button></div></div>
+        <div id="viewContent"></div>
+      </div>
+    </main>
+  </div>
+  <div class="modal-backdrop hidden" id="logoutModal"><div class="confirm-modal"><button class="modal-close" data-close-modal aria-label="Close">×</button><div class="modal-symbol">↪</div><span class="eyebrow">Session control</span><h2>Logout Confirmation</h2><p>Are you sure you want to logout from RR EVENT Dashboard?</p><div class="modal-actions"><button class="secondary-button" data-close-modal>Cancel</button><button class="primary-button" id="confirmLogout">Logout</button></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js?v=booking-form-2"></script>
+</body>
+</html>
